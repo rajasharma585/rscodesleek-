@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE-edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RsCodeSleek</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -55,6 +56,27 @@
   #faq .accordion-item { border-radius: 8px; border: 1px solid #ddd; overflow: hidden; }
   #faq .accordion-item + .accordion-item { margin-top: 10px; }
 
+  body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card, 
+body.dark-mode .section-padding {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+body.dark-mode .btn-warning {
+  background-color: #ffc107;
+  color: #222;
+}
+
+
   </style>
 </head>
 <body>
@@ -63,11 +85,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#home"><span class="text-warning">Rs</span>CodeSleek</a>
+    <button id="darkModeToggle" class="btn btn-sm btn-warning ms-3">🌙</button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -80,6 +105,16 @@
     </div>
   </div>
 </nav>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
 
 <!-- Hero Carousel -->
 <div id="home" class="carousel slide">
@@ -129,8 +164,13 @@
       <img src="about.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
         <h5>About Us</h5>
-        <p>Welcome to <b>RsCodeSleek</b>, your trusted partner for innovative and result-driven freelancing solutions.
-          Established in December 2024, we are a team of passionate developers, designers, and technology enthusiasts.</p>
+        <p>
+  Welcome to <b>RsCodeSleek</b>, your trusted partner for delivering innovative, reliable, and result-driven freelancing solutions.
+  Since our establishment in December 2024, we have been dedicated to empowering businesses and startups with cutting-edge technology solutions.
+  Our team comprises passionate developers, creative designers, and technology enthusiasts who are committed to transforming ideas into impactful digital experiences.
+  We combine technical expertise with creativity and a client-focused approach to deliver scalable web applications, mobile apps, and customized digital solutions that drive measurable results.
+</p>
+
       </div>
     </div>
   </div>
@@ -139,7 +179,7 @@
 <!-- Services Section -->
 <section id="services" class="services section-padding bg-light">
   <div class="container text-center">
-    <h2>Our Services</h2>
+    <h2><b>Our Services</b></h2>
     <p>Delivering excellence with every project.</p>
     <div class="row pt-4">
       <div class="col-md-3">
@@ -166,13 +206,39 @@
   </div>
 </section>
 
+<!-- Counters / Achievements Section -->
+<section id="counters" class="counters section-padding text-white" style="background: #222;">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3">
+        <h2 class="counter" data-target="+50">0</h2>
+        <p>Happy Clients</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="+60">0</h2>
+        <p>Projects Completed</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="+3">0</h2>
+        <p>Years Experience</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="3">0</h2>
+        <p>Team Members</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Portfolio Section -->
     <selection id="portfolio" class="portfolio section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
-                        <h2>Our Projects</h2>
+                        <h2><b>Our Projects</b></h2>
                         <p>Transforming Visions into Reality: <br> Elevating Your Digital Experience with Tailored
                             Solutions, Crafted for Success, Every Step of the Way.
                         </p>
@@ -226,7 +292,7 @@
 <!-- Testimonials -->
 <section id="testimonials" class="testimonials section-padding bg-light">
   <div class="container">
-    <div class="row text-center"><h2>What Our Clients Say</h2></div>
+    <div class="row text-center"><h2><b>What Our Clients Say</b></h2></div>
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active text-center">
@@ -478,5 +544,18 @@
     }
   });
 </script>
+
+<script>
+const toggleButton = document.getElementById('darkModeToggle');
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if(document.body.classList.contains('dark-mode')){
+    toggleButton.innerText = "☀️"; // Day icon
+  } else {
+    toggleButton.innerText = "🌙"; // Night icon
+  }
+});
+</script>
+
 </body>
 </html>
