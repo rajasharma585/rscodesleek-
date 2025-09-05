@@ -11,7 +11,54 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        /* Default Section Padding */
+        .section-padding {
+            padding: 80px 0;
+        }
 
+        /* Tablet and below */
+        @media (max-width: 992px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+
+        /* Mobile only */
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 40px 0;
+            }
+
+            .carousel-caption {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .carousel-caption h5 {
+                font-size: 18px;
+            }
+
+            .card-body p.lead {
+                font-size: 14px;
+            }
+
+            .card-title {
+                font-size: 16px;
+            }
+
+            #team img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+            }
+
+            #contact input,
+            #contact textarea {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -65,7 +112,7 @@
                 <div class="carousel-caption ">
                     <h5>RsCodeSleek Solutions</h5>
                     <p>Empowering Tomorrow's Solutions, Today.</p>
-                    <p>Place-kolkata, contact-+917439184361, email-rscodesleek@gmail.com </p>
+                    <p> Email-rscodesleek@gmail.com </p>
                     <p><a href="#" class="btn btn-warning mt-3">Learn more</a></p>
                 </div>
             </div>
@@ -98,11 +145,6 @@
         </button>
     </div>
 
-
-
-
-  
-
     <section id="about" class="about section-padding">
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-inner">
@@ -110,23 +152,17 @@
                     <img src="about.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption ">
                         <h5>About Us</h5>
-                        <p>Welcome to **RsCodeSleek**, your trusted partner for innovative and result-driven freelancing
+                        <p>Welcome to <b>RsCodeSleek</b>, your trusted partner for innovative and result-driven freelancing
                             solutions. Established in December 2024, we are a team of passionate developers, designers,
                             and technology enthusiasts.
                         </p>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-  
-
     <!-- Portfolio Section -->
-
     <selection id="portfolio" class="portfolio section-padding">
         <div class="container">
             <div class="row">
@@ -148,11 +184,7 @@
                                 <img src="project1.jpg" alt="" class="img-fluid">
                             </div>
                             <h3 class="card-title">Mobile Appliactions</h3>
-                            <p class="lead">Unlock the power of mobile with our expert app development services. From
-                                concept to launch, we craft cutting-edge solutions tailored to your unique needs and
-                                goals. Whether it's iOS, Android, or cross-platform development, our team leverages the
-                                latest technologies to deliver intuitive, engaging mobile experiences that captivate
-                                users and drive results. <br> <br> </p>
+                            <p class="lead">Unlock the power of mobile with our expert app development services...</p>
                         </div>
                         <button class="btn bg-warning text-dark">Learn More</button>
                     </div>
@@ -165,10 +197,7 @@
                             </div>
                             <h3 class="card-title">Web Appliactions</h3>
                             <p class="lead">Revolutionize your online presence with our bespoke web application
-                                development services. From dynamic e-commerce platforms to robust enterprise solutions,
-                                we harness the latest technologies to create immersive web experiences that resonate
-                                with your audience. With a focus on scalability, security, and user-centric design, we
-                                empower businesses to thrive in the digital age.</p>
+                                development services...</p>
                         </div>
                         <button class="btn bg-warning text-dark">Learn More</button>
                     </div>
@@ -180,11 +209,7 @@
                                 <img src="project3.jpg" alt="" class="img-fluid">
                             </div>
                             <h3 class="card-title">Desktop Appliactions</h3>
-                            <p class="lead">Empower your business with custom desktop applications tailored to your
-                                specific needs. Our team of experts specializes in developing robust, intuitive desktop
-                                solutions that streamline processes, increase productivity, and drive growth. From
-                                concept to deployment, we leverage cutting-edge technologies to deliver seamless user
-                                experiences that set you apart in today's competitive landscape.</p>
+                            <p class="lead">Empower your business with custom desktop applications tailored...</p>
                         </div>
                         <button class="btn bg-warning text-dark">Learn More</button>
                     </div>
@@ -197,9 +222,7 @@
 <section id="testimonials" class="testimonials section-padding bg-light">
   <div class="container">
     <div class="row text-center">
-      
         <h2>What Our Clients Say</h2>
-      
     </div>
 
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -208,7 +231,7 @@
         <!-- Testimonial 1 -->
         <div class="carousel-item active text-center">
           <div class="testimonial p-4">
-            <p class="lead">“Rscodesleek Hub transformed our e-commerce platform. The team is highly professional and delivered on time.”</p>
+            <p class="lead">“Rscodesleek Hub transformed our e-commerce platform...”</p>
             <h5 class="mt-3">Ankit Verma</h5>
             <small>Founder, TrendyKart India</small>
           </div>
@@ -217,7 +240,7 @@
         <!-- Testimonial 2 -->
         <div class="carousel-item text-center">
           <div class="testimonial p-4">
-            <p class="lead">“The mobile app they developed for our startup has boosted our customer engagement. Truly reliable partners.”</p>
+            <p class="lead">“The mobile app they developed for our startup...”</p>
             <h5 class="mt-3">Sneha Iyer</h5>
             <small>Co-Founder, EduLearn Pvt Ltd</small>
           </div>
@@ -226,14 +249,13 @@
         <!-- Testimonial 3 -->
         <div class="carousel-item text-center">
           <div class="testimonial p-4">
-            <p class="lead">“Excellent web development services. Their support team is always available whenever we need assistance.”</p>
+            <p class="lead">“Excellent web development services...”</p>
             <h5 class="mt-3">Rahul Mehta</h5>
             <small>Manager, FinServe Technologies</small>
           </div>
         </div>
 
       </div>
-      <!-- Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -248,26 +270,21 @@
 <section id="counters" class="counters section-padding text-white" style="background: #222;">
   <div class="container">
     <div class="row text-center">
-
       <div class="col-md-3">
         <h2 class="counter" data-target="50">0</h2>
         <p>Happy Clients</p>
       </div>
-
       <div class="col-md-3">
         <h2 class="counter" data-target="60">0</h2>
         <p>Projects Completed</p>
       </div>
-
       <div class="col-md-3">
         <h2 class="counter" data-target="2">0</h2>
         <p>Team Members</p>
       </div>
-
     </div>
   </div>
 </section>
-
 
    <!-- Team Section-->
 <section id="team" class="team section-padding">
@@ -289,13 +306,6 @@
                         <img src="team1.jpg" alt="Raja Sharma" class="img-fluid rounded-circle">
                         <h3 class="card-title py-2">Raja Sharma</h3>
                         <p class="card-text">Full Stack Developer, delivering high-quality responsive solutions.</p>
-<!--                         <p class="socials">
-                            <a href="https://twitter.com/rajasharma585" target="_blank"> ... </a>
-                            <a href="https://www.facebook.com/RsCodeSleek" target="_blank"> ... </a>
-                            <a href="https://www.linkedin.com/in/rscodesleek" target="_blank"> ... </a>
-                            <a href="https://www.instagram.com/rscodesleek" target="_blank"> ... </a>
-                            <a href="https://wa.me/917439184361" target="_blank"> ... </a>
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -307,12 +317,6 @@
                         <img src="mannuimage.jpg" alt="Mannu Yadav" class="img-fluid rounded-circle">
                         <h3 class="card-title py-2">Mannu Yadav</h3>
                         <p class="card-text">This is Our Business Analyst. You can contact us and organize with your needs.</p>
-<!--                         <p class="socials">
-                            <a href="https://twitter.com/rajasharma585" target="_blank"> ... </a>
-                            <a href="https://www.facebook.com/RsCodeSleek" target="_blank"> ... </a>
-                            <a href="https://www.linkedin.com/in/rscodesleek" target="_blank"> ... </a>
-                            <a href="https://www.instagram.com/rscodesleek" target="_blank"> ... </a>
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -320,17 +324,14 @@
     </div>
 </section>
 
-
     <!-- Contact Section -->
-
     <section id="contact" class="contact section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
                         <h2>Contact us</h2>
-                        <p>Connecting Dreams, One Message at a Time.
-                        </p>
+                        <p>Connecting Dreams, One Message at a Time.</p>
                     </div>
                 </div>
             </div>
@@ -345,11 +346,9 @@
                                 <input type="email" class="form-control" required placeholder="Your Email here">
                             </div>
                             <div class="mb-3">
-                                <textarea rows="3" required class="form-control"
-                                    placeholder="Your Query here"></textarea>
+                                <textarea rows="3" required class="form-control" placeholder="Your Query here"></textarea>
                             </div>
                         </div>
-
                         <button class="btn btn-warning btn-lg btn-block mt-3">Send Now</button>
                     </div>
                 </div>
@@ -358,7 +357,6 @@
     </section>
 
     <!--Footer-->
-
     <footer class="bg-dark p-2 text-center">
         <div class="container">
             <p class="text-white">All Right Reserved @RsCodeSleek</p>
@@ -370,7 +368,7 @@
     <!-- Counter Script -->
 <script>
   const counters = document.querySelectorAll('.counter');
-  const speed = 200; // lower = faster
+  const speed = 200;
 
   const animateCounters = () => {
     counters.forEach(counter => {
@@ -390,7 +388,6 @@
     });
   };
 
-  // Run animation when section in view
   let countersSection = document.getElementById('counters');
   let started = false;
   window.addEventListener('scroll', () => {
@@ -403,8 +400,4 @@
   });
 </script>
 </body>
-
 </html>
-
-</html>
-
